@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PHP FORM VALIDATION</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="wrapper">
-    <form action="<?php htmlspecialchars("../FormValidator.php"); ?>" method="post">
+    <form action="<?php htmlspecialchars("FormValidator.php"); ?>" method="post">
       <h1>Form Validate</h1>
       <fieldset>
         <div class="form-validate-group" role="group">
@@ -150,7 +150,7 @@
     </form>
     <div class="bubble"></div>
   </div>
-  <script src="../script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
