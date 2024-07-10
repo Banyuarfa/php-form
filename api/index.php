@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PHP FORM VALIDATION</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -150,7 +150,7 @@
     </form>
     <div class="bubble"></div>
   </div>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>
