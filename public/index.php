@@ -10,7 +10,7 @@
 
 <body>
   <div class="wrapper">
-    <form action="<?php echo htmlspecialchars("FormValidator.php"); ?>" method="post">
+    <form action="<?php echo htmlspecialchars("/class/FormValidator.php"); ?>" method="post">
       <h1>Form Validate</h1>
       <fieldset>
         <div class="form-validate-group" role="group">
