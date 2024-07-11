@@ -22,7 +22,7 @@ class FormValidator
 
   private function validateFullname()
   {
-    $pattern = "/^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)*$/";
+    $pattern = "/^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+){3,16}$/";
     $not_empty_and_invalid_onsubmit = !empty($this->datas["onsubmit"]["fullname"]) && !preg_match($pattern, $this->datas["onsubmit"]["fullname"]);
     $not_empty_and_invalid_oninput = !empty($this->datas["oninput"]["fullname"]) && !preg_match($pattern, $this->datas["oninput"]["fullname"]);
     if ($not_empty_and_invalid_onsubmit || $not_empty_and_invalid_oninput)
