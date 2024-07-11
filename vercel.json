@@ -1,10 +1,17 @@
 {
   "functions": {
     "api/index.php": {
-      "runtime": "vercel-php@0.3.6"
+      "runtime": "vercel-php@0.7.1"
     }
   },
   "routes": [
-    { "src": "/(.*)",  "dest": "/api/index.php" }
+    { "src": "/api/index.php", "dest": "/api/index.php" },
+    { "src": "/style.css", "dest": "/public/style.css" },
+    { "src": "/script.js", "dest": "/public/script.js" },
+    {
+      "src": "/FormValidator.php",
+      "dest": "/public/FormValidator.php"
+    },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }

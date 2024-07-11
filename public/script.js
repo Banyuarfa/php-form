@@ -6,6 +6,10 @@ const inputFields = document.querySelectorAll(
 inputFields.forEach((inputField) =>
   inputField.addEventListener("input", validateInput)
 );
+// Validate home address input
+const homeAddressInput = document.querySelector("#home-address");
+homeAddressInput.addEventListener("input", validateInput)
+
 // Get toggle button
 const passwordFieldToggleTypeBtn = document.querySelector("#password-toggle");
 // Toggle password field type when button clicked
