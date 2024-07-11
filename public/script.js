@@ -7,8 +7,8 @@ inputFields.forEach((inputField) =>
   inputField.addEventListener("input", validateInput)
 );
 // Validate home address input
-// const homeAddressInput = document.querySelector("#home-address");
-// homeAddressInput.addEventListener("input", validateInput)
+const homeAddressInput = document.querySelector("#home-address");
+homeAddressInput.addEventListener("input", validateInput)
 
 // Get toggle button
 const passwordFieldToggleTypeBtn = document.querySelector("#password-toggle");
@@ -19,7 +19,7 @@ passwordFieldToggleTypeBtn.addEventListener("click", togglePasswordFieldType);
 function validateInput(event) {
   const field = event.target;
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "/FormValidator.php");
+  xhr.open("PUT", "/FormValidator.php");
   xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
   xhr.onload = () => {
     const error = JSON.parse(xhr.response);
