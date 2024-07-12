@@ -29,6 +29,7 @@ function validateInput(event) {
   };
   xhr.send(`${field.name}=${field.value}`);
 }
+
 function displayError(inputField, error) {
   const errorField = inputField.nextElementSibling;
   const name = inputField.name;
