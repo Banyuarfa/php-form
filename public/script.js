@@ -1,3 +1,5 @@
+const url = "https://php-form-with-ajax.vervel.app";
+
 // Get all input field
 const inputFields = document.querySelectorAll(
   "fieldset .form-validate-group input[required]"
@@ -8,7 +10,7 @@ inputFields.forEach((inputField) =>
 );
 // Validate home address input
 const homeAddressInput = document.querySelector("#home-address");
-homeAddressInput.addEventListener("input", validateInput)
+homeAddressInput.addEventListener("input", validateInput);
 
 // Get toggle button
 const passwordFieldToggleTypeBtn = document.querySelector("#password-toggle");
@@ -19,11 +21,10 @@ passwordFieldToggleTypeBtn.addEventListener("click", togglePasswordFieldType);
 function validateInput(event) {
   const field = event.target;
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "/class/FormValidator.php");
+  xhr.open("POST", url + "/class/FormValidator.php");
   xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
   xhr.onload = () => {
     const error = JSON.parse(xhr.response);
-    console.log(error);
     displayError(field, error);
   };
   xhr.send(`${field.name}=${field.value}`);

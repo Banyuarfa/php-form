@@ -76,7 +76,6 @@ class FormValidator
       return "Age invalid";
   }
 }
-
 if ($_SERVER["REQUEST_METHOD"]  === "POST") {
   $onsubmit_datas = $_POST;
   $oninput_datas = $_REQUEST;
