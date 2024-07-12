@@ -91,10 +91,12 @@ textarea::placeholder {
 }
 /* Wrapper */
 .wrapper {
+  display: gird;
+  place-content: center;
   background-color: black;
   position: relative;
   overflow-x: hidden;
-  padding: 2em;
+  height: 100vh;
   z-index: 99;
 }
 .wrapper .bubble {
@@ -105,7 +107,7 @@ textarea::placeholder {
   height: 80vh;
   width: 200vw;
   z-index: -1;
-  top: -10em;
+  top: -30%;
   left: -50%;
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
@@ -179,7 +181,7 @@ form .output p {
   }
   form {
     border-radius: unset;
-    height: 100%;
+    height: max-content;
     width: 100%;
     -webkit-border-radius: unset;
     -moz-border-radius: unset;
