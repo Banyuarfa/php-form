@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.6.2"
@@ -13,5 +14,14 @@
       "dest": "/public/class/FormValidator.php"
     },
     { "src": "/(.*)", "dest": "/api/index.php" }
-  ]
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "true",
+    "APP_URL": "https://php-form-with-ajax.vercel.app/",
+    "CACHE_DRIVER": "array",
+    "LOG_CHANNEL": "stderr",
+    "SESSION_DRIVER": "cookie"
+  },
+  "outputDirectory": "public"
 }
