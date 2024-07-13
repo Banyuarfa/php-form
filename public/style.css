@@ -31,9 +31,6 @@ input::placeholder,
 textarea::placeholder {
   color: #acacac;
 }
-/* input:{
-  background-color: transparent;
-} */
 /* Hide Toggle Password Button */
 #password-toggle {
   background-color: transparent;
