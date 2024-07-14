@@ -21,13 +21,18 @@ passwordFieldToggleTypeBtn.addEventListener("click", togglePasswordFieldType);
 function validateInput(event) {
   const field = event.target;
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "/class/FormValidator.php");
-  xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+  const body = { name: field.value };
+  xhr.open("POST", "./class/FormValidator.php");
+  xhr.setRequestHeader("content-type", "application/json");
+
   xhr.onload = () => {
-    const error = JSON.parse(xhr.response);
-    displayError(field, error);
+    console.log(xhr.response);
+    // const error = JSON.parse(xhr.response);
+    // displayError(field, error);
   };
-  xhr.send(`${field.name}=${field.value}`);
+  console.log(body[field.name]);
+
+  xhr.send(JSON.stringify(body));
 }
 
 function displayError(inputField, error) {
