@@ -1,5 +1,3 @@
-const url = "https://php-form-with-ajax.vervel.app";
-
 // Get all input field
 const inputFields = document.querySelectorAll(
   "fieldset .form-validate-group input[required]"
@@ -21,7 +19,7 @@ passwordFieldToggleTypeBtn.addEventListener("click", togglePasswordFieldType);
 function validateInput(event) {
   const field = event.target;
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "./class/FormValidator.php");
+  xhr.open("POST", "class/FormValidator.php");
   xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
   xhr.onload = () => {
     console.log(xhr.response);
