@@ -17,7 +17,7 @@
   ],
   "headers": [
     {
-      "src": "/api/index.php",
+      "source": "/api/index.php",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
         {
