@@ -1,5 +1,3 @@
-<?php require "class/FormValidator.php"?>
-
 <!DOCTYPE html>
 <html lang="en">
 
