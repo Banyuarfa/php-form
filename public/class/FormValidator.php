@@ -1,5 +1,4 @@
 <?php
-// header("Content-Type: application/json");
 class FormValidator
 {
   private $datas = [];
@@ -12,14 +11,13 @@ class FormValidator
   }
   public function validate()
   {
-    // $this->errors["fullname"] = $this->validateFullname();
-    // $this->errors["username"] = $this->validateUsername();
-    // $this->errors["email"] = $this->validateEmail();
-    // $this->errors["phone-number"] = $this->validatePhoneNumber();
-    // $this->errors["home-address"] = $this->validateHomeAddress();
-    // $this->errors["password"] = $this->validatePassword();
-    // $this->errors["age"] = $this->validateAge();
-    return $this->datas["oninput"];
+    $this->errors["fullname"] = $this->validateFullname();
+    $this->errors["username"] = $this->validateUsername();
+    $this->errors["email"] = $this->validateEmail();
+    $this->errors["phone-number"] = $this->validatePhoneNumber();
+    $this->errors["home-address"] = $this->validateHomeAddress();
+    $this->errors["password"] = $this->validatePassword();
+    $this->errors["age"] = $this->validateAge();
   }
 
   private function validateFullname()
@@ -81,11 +79,10 @@ class FormValidator
 if ($_SERVER["REQUEST_METHOD"]  === "POST") {
   try {
     $onsubmit_datas = $_POST;
-    $oninput_datas = json_decode(file_get_contents("php://input"), true);
+    $oninput_datas = $_REQUEST;
     $validator = new FormValidator($onsubmit_datas, $oninput_datas);
-    print_r($validator->validate());
-    // echo json_encode($validator->errors);
-
+    $validator->validate();
+    echo json_encode($validator->errors);
   } catch (Exception $e) {
     echo $e;
   }
