@@ -5,15 +5,15 @@
       "runtime": "vercel-php@0.6.2"
     }
   },
-  "routes": [
-    { "src": "/api/index.php", "dest": "/api/index.php" },
-    { "src": "/style.css", "dest": "/public/style.css" },
-    { "src": "/script.js", "dest": "/public/script.js" },
+  "redirects": [
+    { "source": "/api/index.php", "destination": "/api/index.php" },
+    { "source": "/style.css", "destination": "/public/style.css" },
+    { "source": "/script.js", "destination": "/public/script.js" },
     {
-      "src": "/class/FormValidator.php",
-      "dest": "/public/class/FormValidator.php"
+      "source": "/class/FormValidator.php",
+      "destination": "/public/class/FormValidator.php"
     },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "source": "/(.*)", "destination": "/api/index.php" }
   ],
   "headers": [
     {
