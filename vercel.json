@@ -15,13 +15,21 @@
     },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
-  "env": {
-    "APP_ENV": "production",
-    "APP_DEBUG": "true",
-    "APP_URL": "https://php-form-with-ajax.vercel.app/",
-    "CACHE_DRIVER": "array",
-    "LOG_CHANNEL": "stderr",
-    "SESSION_DRIVER": "cookie"
-  },
+  "headers": [
+    {
+      "src": "/api/index.php",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,POST,PUT,DELETE,OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
   "outputDirectory": "public"
 }
