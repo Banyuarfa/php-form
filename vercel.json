@@ -8,7 +8,7 @@
   "routes": [
     { "src": "/api/index.php", "dest": "/api/index.php" },
     { "src": "/style.css", "dest": "/public/style.css" },
-    { "src": "/script.js","methods": ["POST"], "dest": "/public/script.js" },
+    { "src": "/script.js", "dest": "/public/script.js" },
     {
       "src": "/class/FormValidator.php",
       "methods": ["POST"],
