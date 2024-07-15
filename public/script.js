@@ -21,13 +21,14 @@ async function validateInput(event) {
     const field = event.target;
     const xhr = new XMLHttpRequest();
     xhr.open("POST", "class/FormValidator.php");
-    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("content-type", "application/json");
     xhr.onload = () => {
       console.log(xhr.response);
       const error = JSON.parse(xhr.response);
       displayError(field, error);
     };
-    xhr.send(`${field.name}=${field.value}`);
+    // xhr.send(`${field.name}=${field.value}`);
+    xhr.send({ field: field.name });
   } catch (err) {
     console.log(err);
   }
