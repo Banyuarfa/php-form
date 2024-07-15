@@ -4,7 +4,6 @@
       "runtime": "vercel-php@0.6.2"
     }
   },
-  "cleanUrls": true,
   "rewrites": [
     { "source": "/api/index.php", "destination": "/api/index.php" },
     { "source": "/style.css", "destination": "/public/style.css" },
