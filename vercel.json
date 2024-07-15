@@ -1,44 +1,24 @@
 {
-  "version": 2,
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.6.2"
     }
   },
-  "routes": [
-    { "src": "/api/index.php", "dest": "/api/index.php" },
-    { "src": "/style.css", "dest": "/public/style.css" },
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/index.php", "destination": "/api/index.php" },
+    { "source": "/style.css", "destination": "/public/style.css" },
     {
-      "src": "/script.js",
-      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-      },
-      "dest": "/public/script.js"
+      "source": "/script.js",
+      "destination": "/public/script.js"
     },
     {
-      "src": "/class/FormValidator.php",
-      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      "headers": {
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-      },
-      "dest": "/public/class/FormValidator.php"
+      "source": "/class/FormValidator.php",
+      "destination": "/public/class/FormValidator.php"
     },
     {
-      "src": "/(.*)",
-      "headers": {
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-      },
-      "dest": "/api/index.php"
+      "source": "/(.*)",
+      "destination": "/api/index.php"
     }
   ],
   "outputDirectory": "public"

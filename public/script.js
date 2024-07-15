@@ -16,17 +16,21 @@ const passwordFieldToggleTypeBtn = document.querySelector("#password-toggle");
 passwordFieldToggleTypeBtn.addEventListener("click", togglePasswordFieldType);
 
 // Functions
-function validateInput(event) {
-  const field = event.target;
-  const xhr = new XMLHttpRequest();
-  xhr.open("POST", "class/FormValidator.php");
-  xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-  xhr.onload = () => {
-    console.log(xhr.response);
-    const error = JSON.parse(xhr.response);
-    displayError(field, error);
-  };
-  xhr.send(`${field.name}=${field.value}`);
+async function validateInput(event) {
+  try {
+    const field = event.target;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "class/FormValidator.php");
+    xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+    xhr.onload = () => {
+      console.log(xhr.response);
+      const error = JSON.parse(xhr.response);
+      displayError(field, error);
+    };
+    xhr.send(`${field.name}=${field.value}`);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 function displayError(inputField, error) {
