@@ -8,7 +8,7 @@
     { "src": "/api/index.php", "dest": "/api/index.php" },
     {
       "src": "/FormValidator.php",
-      "dest": "/public/FormValidator.php"
+      "dest": "/public/class/FormValidator.php"
     },
     { "src": "/style.css", "dest": "/public/style.css" },
     {
