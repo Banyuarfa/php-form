@@ -7,8 +7,8 @@
   "routes": [
     { "src": "/api/index.php", "dest": "/api/index.php" },
     {
-      "src": "/api/FormValidator.php",
-      "dest": "/api/FormValidator.php"
+      "src": "/FormValidator.php",
+      "dest": "/public/FormValidator.php"
     },
     { "src": "/style.css", "dest": "/public/style.css" },
     {
