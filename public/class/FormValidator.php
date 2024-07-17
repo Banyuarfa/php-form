@@ -81,5 +81,6 @@ if ($_SERVER["REQUEST_METHOD"]  === "POST") {
   $oninput_datas = $_REQUEST;
   $validator = new FormValidator($onsubmit_datas, $oninput_datas);
   $validator->validate();
+  header("Content-Type: application/json");
   echo json_encode($validator->errors);
 }
