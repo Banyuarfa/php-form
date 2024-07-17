@@ -13,7 +13,7 @@
     },
     {
       "src": "/FormValidator.php",
-      "dest": "/public/class/FormValidator.php"
+      "dest": "/public/FormValidator.php"
     },
     {
       "src": "/(.*)",
