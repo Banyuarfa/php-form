@@ -7,8 +7,7 @@
   "routes": [
     { "src": "/api/index.php", "dest": "/api/index.php" },
     {
-      "src": "/FormValidator.php",
-      "headers": { "Content-Type": "application/json" },
+      "src": "/class/FormValidator.php",
       "dest": "/public/class/FormValidator.php"
     },
     { "src": "/style.css", "dest": "/public/style.css" },
