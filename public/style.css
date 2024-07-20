@@ -131,8 +131,9 @@ form {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
 }
+
 form fieldset {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(200px, 300px));
   font-size: 1rem;
   display: grid;
   border: none;
