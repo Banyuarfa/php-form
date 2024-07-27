@@ -6,19 +6,12 @@
   },
 
   "rewrites": [
-    { "source": "/api/index.php", "destination": "/api/index.php" },
     {
       "source": "/class/FormValidator.php",
-      "destination": "/api/class/FormValidator.php"
+      "destination": "/api/index.js"
     },
     { "source": "/style.css", "destination": "/public/style.css" },
-    {
-      "source": "/script.js",
-      "destination": "/public/script.js"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/api/index.php"
-    }
+    { "source": "/script.js", "destination": "/public/script.js" },
+    { "source": "/:path*", "destination": "/api/index.js" }
   ]
 }
