@@ -4,26 +4,21 @@
       "runtime": "vercel-php@0.6.2"
     }
   },
-  "routes": [
-    { "src": "/api/index.php", "dest": "/api/index.php" },
-    {
-      "src": "/class/FormValidator.php",
-      "headers": [
-        { "Access-Control-Allow-Origin": "*" },
-        { "Access-Control-Allow-Methods": "POST" },
-        { "Access-Control-Allow-Headers": "Content-Type, Authorization" }
-      ],
-      "dest": "/public/class/FormValidator.php"
-    },
-    { "src": "/style.css", "dest": "/public/style.css" },
-    {
-      "src": "/script.js",
-      "dest": "/public/script.js"
-    },
 
+  "rewrites": [
+    { "source": "/api/index.php", "destination": "/api/index.php" },
     {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
+      "source": "/class/FormValidator.php",
+      "destination": "/api/class/FormValidator.php"
+    },
+    { "source": "/style.css", "destination": "/public/style.css" },
+    {
+      "source": "/script.js",
+      "destination": "/public/script.js"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/api/index.php"
     }
   ]
 }
